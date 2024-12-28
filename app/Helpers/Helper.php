@@ -28,7 +28,7 @@ class Helper
         } else if (config('app.env') == "staging") {
             return app('url')->asset($path, $secure);
         } else if (config('app.env') == "production") {
-            return app('url')->asset($path, $secure);
+            return app('url')->asset($path, true);
         }
         return app('url')->asset("public/" . $path, $secure);
     }
