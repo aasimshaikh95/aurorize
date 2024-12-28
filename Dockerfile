@@ -42,13 +42,6 @@ RUN composer install --optimize-autoloader --no-dev && \
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Run database migrations
-RUN php artisan migrate --force
-
-# Run the database seeder (AdminTableSeeder)
-RUN php artisan db:seed --class=AdminTableSeeder --force
-
-
 
 # Expose port 9000 and start PHP-FPM server
 EXPOSE 9000
