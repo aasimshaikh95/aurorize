@@ -1,6 +1,10 @@
 # Use an official PHP image as the base
 FROM php:8.2-fpm
 
+
+EXPOSE 80
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=$PORT"]
+
 # Set environment variables
 ENV DEBIAN_FRONTEND=noninteractive \
     APP_ENV=production
