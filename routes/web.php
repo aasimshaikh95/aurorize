@@ -17,7 +17,7 @@ use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 |
 */
 
-// Route::get('logs', [LogViewerController::class, 'index']);
+Route::get('logs', [LogViewerController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'homePage'])->name('home');
 Route::get('/inquiry', [HomeController::class, 'homeInquiry'])->name('home.inquiry');
