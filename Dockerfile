@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd zip pdo_mysql bcmath opcache \
+    && docker-php-ext-install -j$(nproc) gd zip pdo_mysql bcmath opcache pdo_pgsql \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install Composer
