@@ -38,6 +38,14 @@ RUN composer install --optimize-autoloader --no-dev && \
     php artisan view:cache
 
 
+# Configure Apache to force HTTPS
+RUN echo "<VirtualHost *:80>\n\
+RewriteEngine On\n\
+RewriteCond %{HTTPS} off\n\
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]\n\
+</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
+
+
 # Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
