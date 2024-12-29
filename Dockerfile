@@ -11,7 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
-    netcat \
+    netcat-openbsd \
     curl \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
