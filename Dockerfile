@@ -45,7 +45,8 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Run the deployApp command
-php artisan deploy:app --force
+RUN php artisan deploy:app --force
+
 
 # Copy the entrypoint script
 COPY docker-entrypoint.sh /usr/local/bin/
