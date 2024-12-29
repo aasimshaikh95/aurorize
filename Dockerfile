@@ -44,6 +44,19 @@ RUN composer install --optimize-autoloader --no-dev && \
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
+# Install necessary extensions (e.g., PDO for PostgreSQL)
+RUN docker-php-ext-install pdo pdo_pgsql
+
+# Copy the entrypoint script
+COPY docker-entrypoint.sh /usr/local/bin/
+
+# Make the script executable
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Set the entrypoint script
+ENTRYPOINT ["docker-entrypoint.sh"]
+
+
 
 # Expose port 9000 and start PHP-FPM server
 EXPOSE 9000
