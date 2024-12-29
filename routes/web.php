@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\VerificationController;
 use Rap2hpoutre\LaravelLogViewer\LogViewerController;
+use Illuminate\Support\Facades\Artisan;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,18 @@ use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 */
 
 Route::get('logs', [LogViewerController::class, 'index']);
+
+
+Route::get('/run-migrations', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Migrations executed successfully.';
+});
+
+Route::get('/run-seeder', function () {
+    Artisan::call('db:seed', ['--class' => 'AdminTableSeeder', '--force' => true]);
+    return 'Seeder executed successfully.';
+});
+
 
 Route::get('/', [HomeController::class, 'homePage'])->name('home');
 Route::get('/inquiry', [HomeController::class, 'homeInquiry'])->name('home.inquiry');
