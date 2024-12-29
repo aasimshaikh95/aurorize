@@ -11,6 +11,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
+    netcat \
     curl \
     libfreetype6-dev \
     libjpeg62-turbo-dev \
@@ -43,10 +44,6 @@ RUN composer install --optimize-autoloader --no-dev && \
 # Set permissions for Laravel
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
-
-# Run the deployApp command
-RUN php artisan deploy:app --force
-
 
 # Copy the entrypoint script
 COPY docker-entrypoint.sh /usr/local/bin/

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Exit immediately if a command exits with a non-zero status
+set -e
+
 # Wait for the database to be ready
 echo "Waiting for database connection..."
 until nc -z -v -w30 $DB_HOST $DB_PORT; do
@@ -8,11 +11,8 @@ until nc -z -v -w30 $DB_HOST $DB_PORT; do
 done
 echo "Database is ready!"
 
-# Run database migrations
-php artisan migrate --force
+# Run the deploy:app command
+php artisan deploy:app --force
 
-# Run database seeders
-php artisan db:seed --class=AdminTableSeeder --force
-
-# Start the main process (Apache)
+# Execute the main process specified in the Dockerfile's CMD
 exec "$@"
