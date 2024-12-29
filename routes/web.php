@@ -28,7 +28,7 @@ Route::get('/run-migrations', function () {
 });
 
 Route::get('/run-seeder', function () {
-    Artisan::call('db:seed', ['--class' => 'AdminTableSeeder', '--force' => true]);
+    Artisan::call('db:seed', ['--class' => 'AdminsTableSeeder', '--force' => true]);
     return 'Seeder executed successfully.';
 });
 
