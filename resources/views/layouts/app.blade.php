@@ -94,7 +94,7 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="{{Helper::assets('front_assets/img/favicon.png')}}" height="80" width="80" alt="#"></a>
+									<a href="{{route('home')}}"><img src="{{Helper::assets('front_assets/img/favicon.png')}}" height="80" width="80" alt="#"></a>
 									<em class="site-logo">Aurorize Healthcare Solutions</em>
 									{{-- <p class="slogan">Your Trusted Partner for RCM Excellence</p> --}}
 								</div>
