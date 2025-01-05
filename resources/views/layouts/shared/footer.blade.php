@@ -3,12 +3,32 @@
     <!-- Footer Top -->
     <div class="footer-top">
         <div class="container">
+
+            <div class="row justify-content-center text-center mb-4">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="{{Helper::assets('front_assets/img/favicon.png')}}" height="80" width="80" alt="Aurorize Logo">
+                    </a>
+                    <em class="site-logo-bottom">Aurorize Healthcare Solutions</em>
+                    {{-- <p class="slogan">Your Trusted Partner for RCM Excellence</p> --}}
+                </div>
+            </div>
             <div class="row">
-                <!-- About Us Section -->
-                <div class="col-lg-6 col-md-6 col-12 mb-4">
+
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <div class="single-footer">
-                        <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <h2>Our Address</h2>
+                        <p><strong>Office 1:</strong> San Francisco Bay Area, CA, USA</p>
+                        <p><strong>Office 2:</strong> Ahmedabad, Gujarat, India</p>
+                        <p><strong>Email:</strong> rcm@aurorizesolutions.com</p>
+                        <p><strong>Phone:</strong> +1(650)451-9908</p>
+                    </div>
+                </div>
+                <!-- About Us Section -->
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    <div class="single-footer">
+                        <a href="{{ route('home.aboutUs') }}"><h2>About Us</h2></a>
+                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p> --}}
                         <!-- Social Media Links -->
                         <ul class="social">
                             <li><a href="#" class="social-icon"><i class="icofont-facebook"></i></a></li>
@@ -21,7 +41,7 @@
                 </div>
 
                 <!-- Quick Links Section -->
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
                     <div class="single-footer f-link">
                         <h2>Quick Links</h2>
                         <div class="row">
@@ -31,6 +51,7 @@
                                     <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
                                     <li><a href="{{ route('home.idr') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> IDR</a></li>
                                     <li><a href="{{ route('home.rcm') }}"><i class="fa fa-caret-right" aria-hidden="true"></i> RCM</a></li>
+                                    <li><a href="#blog"><i class="fa fa-caret-right" aria-hidden="true"></i> HIPAA compliant</a></li>
                                 </ul>
                             </div>
                             <div class="col-6">

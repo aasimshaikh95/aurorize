@@ -33,7 +33,7 @@
 <!-- Magnific Popup JS -->
 <script src="{{ Helper::assets('front_assets/js/jquery.magnific-popup.min.js')}}"></script>
 <!-- Counter Up CDN JS -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <!-- Bootstrap JS -->
 <script src="{{ Helper::assets('front_assets/js/bootstrap.min.js')}}"></script>
 <!-- Main JS -->

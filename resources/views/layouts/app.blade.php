@@ -12,9 +12,55 @@
     
     @include('layouts.shared.head')
 	<style>
-		.site-logo{
+		/* .site-logo{
 			font: normal bold 28px 'Roboto',Arial,sans-serif;
 		}
+		.site-logo{
+			color: #1a76d1;
+		} */
+
+
+	.logo {
+    display: flex;               /* Flexbox for side alignment */
+    align-items: center;         /* Vertically center content */
+    gap: 15px;                   /* Space between logo and text */
+}
+
+.logo img {
+    max-width: 80px;             /* Logo size control */
+    height: auto;                /* Maintain aspect ratio */
+	margin-bottom: 10px;          /* Space below the logo */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;      /* Stack company name and slogan vertically */
+    justify-content: center;
+}
+
+.site-logo {
+    font-size: 24px;             /* Company name size */
+    font-weight: bold;
+    color: #1a76d1;              /* Matching the provided color */
+    margin: 0;                   /* Remove default margin */
+}
+
+.site-logo-bottom {
+    font-size: 24px;             /* Company name size */
+    font-weight: bold;
+    color: white;              /* Matching the provided color */
+    margin: 0;                   /* Remove default margin */
+}
+
+.slogan {
+    font-size: 14px;
+    font-style: italic;
+    color: #ddd5d5;
+    margin-top: 5px;
+}
+
+
+
 	</style>
 </head>
 
@@ -48,8 +94,9 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<a href="index.html"><img src="{{Helper::assets('front_assets/img/AOS-logo.jpg')}}" height="100" width="100" alt="#"></a>
-									<em class="site-logo">Aurorize</em>
+									<a href="index.html"><img src="{{Helper::assets('front_assets/img/favicon.png')}}" height="80" width="80" alt="#"></a>
+									<em class="site-logo">Aurorize Healthcare Solutions</em>
+									{{-- <p class="slogan">Your Trusted Partner for RCM Excellence</p> --}}
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -65,7 +112,8 @@
 											</li>
 											<li class="{{ in_array(Route::currentRouteName(),['home.rcm']) ? 'active' : '' }} "><a href="{{ route('home.rcm') }}">RCM </a></li>
 											<li class="{{ in_array(Route::currentRouteName(),['home.idr']) ? 'active' : '' }}"><a href=" {{ route ('home.idr') }}">IDR </a></li>
-											<li><a href="#">About Us </a></li>
+											{{-- <li><a href="#">About Us </a></li> --}}
+											<li class="{{ in_array(Route::currentRouteName(),['home.aboutUs']) ? 'active' : '' }}"><a href=" {{ route ('home.aboutUs') }}">About Us </a></li>
 											<li class="{{in_array(Route::currentRouteName(),['home.inquiry']) ? 'active' : '' }} "><a href="{{route('home.inquiry')}}">Contact Us</a></li>
 										</ul>
 									</nav>

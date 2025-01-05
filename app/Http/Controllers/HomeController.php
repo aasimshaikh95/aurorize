@@ -211,6 +211,12 @@ class HomeController extends Controller
         return view('front.idr');
     }
 
+    public function getAboutUs()
+    {
+        // dd(1);
+        return view('front.aboutus');
+    }
+
     /**
      * About Us Page
      *

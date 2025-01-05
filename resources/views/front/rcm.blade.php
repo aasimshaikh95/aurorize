@@ -126,6 +126,11 @@
 .section{
     padding: 0 !important;
 }
+
+.popup-content h3 {
+    color: #1A76D1; /* Sets the text color to blue */
+}
+
     
 </style>
 @endsection
@@ -444,7 +449,7 @@
 
     <div id="eligibility-verification" class="popup-container">
         <div class="popup-content">
-            <a href="javascript:void(0);" class="close-popup">&times;</a>
+            <a href="#" class="close">&times;</a>
             <h3>Eligibility Verification</h3>
             <p>
                 Before the provider delivers services, we confirm the patient's existing insurance eligibility, update their account with the latest insurance eligibility status, and identify and address any potential issues.

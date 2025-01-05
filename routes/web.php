@@ -39,5 +39,6 @@ Route::post('/inquiry/submit', [HomeController::class, 'submitInquiry'])->name('
 
 Route::get('/rcm', [HomeController::class, 'getRcm'])->name('home.rcm');
 Route::get('/idr', [HomeController::class, 'getIdr'])->name('home.idr');
+Route::get('/aboutUs', [HomeController::class, 'getAboutUs'])->name('home.aboutUs');
 
 

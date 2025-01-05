@@ -128,6 +128,7 @@
     .list li {
         font-size: 1rem;
     }
+
 }
     
 </style>
@@ -315,7 +316,7 @@
 <div id="fun-facts" class="fun-facts section overlay">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
+            {{-- <div class="col-lg-3 col-md-6 col-12">
                 <div class="single-fun">
                     <i class="icofont icofont-home"></i>
                     <div class="content">
@@ -323,14 +324,14 @@
                         <p>Hospital Rooms</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Single Fun -->
                 <div class="single-fun">
                     <i class="icofont icofont-user-alt-3"></i>
                     <div class="content">
-                        <span class="counter" id="win-ratio">98</span>
-                        <p>IDR Win ration</p> 
+                        <span class="" id="win-ratio">98%</span>
+                        <p>IDR Win ratio</p> 
                     </div>
                 </div>
                 <!-- End Single Fun -->
@@ -538,7 +539,7 @@
             <div class="col-lg-4 col-md-6 col-12">
                 <!-- Start Single Service -->
                 <div class="single-service">
-                    <i class="icofont-ban"></i>
+                    <i class="icofont-shield"></i>
                     <h4><a href="javascript:void(0);">Proactive Denial Management</a></h4>
                     <p>Diligent in their approach, our AR team pinpoints denial causes and takes corrective action to stop reoccurrences.</p>    
                 </div>
@@ -972,4 +973,7 @@
 </section> -->
 <!-- /End Newsletter Area -->
 
+@endsection
+
+@section('script-bottom')
 @endsection

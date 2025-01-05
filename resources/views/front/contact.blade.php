@@ -6,6 +6,16 @@
 @section('title')
     Contact us
 @endsection
+@section('css')
+<style>
+    .single-info {
+    height: auto; /* Adjusts based on content */
+    min-height: 200px; /* Set a minimum height to ensure the content has enough space */
+    padding: 20px; /* Adjust padding if needed */
+}
+
+    </style>
+@endsection
 @section('content')
 
 <section class="contact-us section">
@@ -65,30 +75,23 @@
                     <div class="single-info">
                         <i class="icofont icofont-ui-call"></i>
                         <div class="content">
-                            <h3>+(000) 1234 56789</h3>
-                            <p>info@company.com</p>
+                            <h3>+1(650)451-9908</h3>
+                            <p>rcm@aurorizesolutions.com</p>
                         </div>
                     </div>
                 </div>
                 <!--/End single-info -->
                 <!-- single-info -->
+
                 <div class="col-lg-4 col-12 ">
                     <div class="single-info">
                         <i class="icofont-google-map"></i>
                         <div class="content">
-                            <h3>Ahmdabad</h3>
-                            <p>Gujarat</p>
-                        </div>
-                    </div>
-                </div>
-                <!--/End single-info -->
-                <!-- single-info -->
-                <div class="col-lg-4 col-12 ">
-                    <div class="single-info">
-                        <i class="icofont icofont-wall-clock"></i>
-                        <div class="content">
-                            <h3>Mon - Sat: 8am - 5pm</h3>
-                            <p>Sunday Closed</p>
+                            <h3>San Francisco Bay Area</h3>
+                            <p>CA, USA</p>
+                            <br>
+                            <h3>Ahmedabad</h3>
+                            <p>Gujarat, India</p>
                         </div>
                     </div>
                 </div>

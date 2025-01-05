@@ -199,7 +199,9 @@ body {
         margin-bottom: 20px;
     }
 }
-
+.idr{
+		color: #1a76d1;
+}
 
     
 </style>
@@ -217,12 +219,12 @@ body {
         <div class="bread-inner">
         <div class="row">
             <div class="col-12">
-            <h2>IDR</h2>
+            <h2 class="idr">Independent Dispute Resolution</h2>
             <ul class="bread-list">
-                <li><a href="https://www.free-css.com/free-css-templates">IDR</a></li>
-                <li><i class="icofont-simple-right"></i></li>
-                <li class="active">Independent Dispute Resolution</li><br>
-                <li>The U.S. federal government released the final rule on the No Surprises Act, establishing clear guidelines for how out-of-network medical bills will be reimbursed when providers and payers cannot reach an agreement, and the case enters independent dispute resolution (IDR).</li>
+                {{-- <li><a href="https://www.free-css.com/free-css-templates">IDR</a></li>
+                <li><i class="icofont-simple-right"></i></li> --}}
+                 {{-- <li class="active">Independent Dispute Resolution</li><br> --}}
+                {{-- <li>The U.S. federal government released the final rule on the No Surprises Act, establishing clear guidelines for how out-of-network medical bills will be reimbursed when providers and payers cannot reach an agreement, and the case enters independent dispute resolution (IDR).</li> --}}
             </ul>
             </div>
         </div>
@@ -239,7 +241,7 @@ body {
                 <p class="hero-text">
                     Tired of the headaches with out-of-network claims disputes? Let Aurorize take the hassle out of the process! Our Independent Dispute Resolution (IDR) services are here to help you secure fair reimbursement under the No Surprises Act.
                 </p>
-                <a href="{{route('home.inquiry')}}" class="cta-button">Get Your Free Consultation</a>
+                <a href="{{route('home.inquiry')}}" class="cta-button">Get Your Free Quote Today!</a>
             </div>
         </div>
     </section>
